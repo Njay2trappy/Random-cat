@@ -47,7 +47,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("🐱 Hello, Welcome to njay world, use the < me > to get a random cat fact today.");
+  res.send("🐱 Hello, Welcome to njay world, use the < /me > to get a random cat fact today.");
 });
 
 app.get("/me", async (_req, res) => {

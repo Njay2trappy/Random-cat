@@ -80,6 +80,7 @@ Visit:
 http://localhost:4000/graphql
 Run query:
 
+```graphql
 query {
   getRandomnfact {
     status

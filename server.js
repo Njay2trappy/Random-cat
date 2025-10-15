@@ -1,6 +1,7 @@
 // server.js
 import "dotenv/config";
 import express from "express";
+import rateLimit from "express-rate-limit";
 import { makeExecutableSchema } from "@graphql-tools/schema";
 import { graphql } from "graphql";
 import { ApolloServer } from "@apollo/server";
@@ -13,6 +14,15 @@ import { resolvers } from "./resolvers.js";
 
 const schema = makeExecutableSchema({ typeDefs, resolvers });
 const app = express();
+
+// 10 requests/min for public REST API
+const factLimiter = rateLimit({ windowMs: 60_000, max: 10 });
+app.use("/me", factLimiter);
+
+// 200 requests/hour for GraphQL endpoint
+const gqlLimiter = rateLimit({ windowMs: 60 * 60_000, max: 200 });
+app.use("/graphql", gqlLimiter);
+
 
 app.use(
   cors({
@@ -37,7 +47,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("🐱 CatFact GraphQL server is running! CORS limited to localhost:3000");
+  res.send("🐱 Hello, Welcome to njay world, use the < me > to get a random cat fact today.");
 });
 
 app.get("/me", async (_req, res) => {

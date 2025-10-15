@@ -134,7 +134,7 @@ These are automatically installed when you run npm install:
 
 ---
 
-###🧠 Notes
+🧠 Notes
 Hosted successfully on Railway (no Docker required)
 
 CORS restricted to http://localhost:3000 for security
@@ -145,12 +145,12 @@ Clean modular design (schema.js, resolvers.js, server.js)
 
 ---
 
-###🧾 License
+🧾 License
 This project is open-source and available under the MIT License.
 
 ---
 
-###✨ Author
+✨ Author
 
 Ikechukwu Ngoeisna
 Backend & Blockchain Developer

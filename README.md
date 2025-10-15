@@ -93,6 +93,7 @@ query {
     fact
   }
 }
+```
 
 🌐 REST Endpoint
 GET request to:
@@ -100,7 +101,7 @@ GET request to:
 http://localhost:4000/me
 Expected response:
 
-
+```json
 {
   "status": "success",
   "user": {
@@ -111,10 +112,12 @@ Expected response:
   "timestamp": "2025-10-15T14:35:10Z",
   "fact": "Cats sleep for 70% of their lives."
 }
+```
 
 📦 Dependencies
 These are automatically installed when you run npm install:
 
+```json
 {
   "@apollo/server": "^4.10.0",
   "axios": "^1.7.0",
@@ -125,6 +128,7 @@ These are automatically installed when you run npm install:
   "express-rate-limit": "^8.1.0",
   "graphql": "^16.9.0"
 }
+```
 
 🧠 Notes
 Hosted successfully on Railway (no Docker required)
@@ -143,3 +147,5 @@ Ikechukwu Ngoeisna
 Backend & Blockchain Developer
 🔗 [Portfolio](https://unixmachine.netlify.app/)
 🐙 [GitHub](https://github.com/Njay2trappy)
+
+

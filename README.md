@@ -55,12 +55,14 @@ npm install
 
 Add the following environment variables:
 
+```bash
 CATFACT_BASE_URL=https://catfact.ninja/fact
 CATFACT_CSRF_TOKEN=EA7B0Qjv4wK5Npiv1a8Klpp187JrDA5AMk6QSEFy
 PORT=4000
 USER_EMAIL=your email
 USER_NAME=your name
 USER_STACK=NERN Stack (Node.js, Express, React, Node GraphQL)
+```
 
 ### 4. Run the server locally
 For development:
